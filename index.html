@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Tikiting</title>
+    <!-- deisiui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- font inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="mx-3 lg:mx-10">
+    <header class=" font-raleway space-y-10">
+        <!-- navber section  -->
+        <div>
+            <div class="navbar bg-base-100">
+                <div class="w-full lg:w-1/2">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                      <li><a>Home</a></li>
+                      <li><a>About</a></li>
+                      <li><a>Destination</a></li>
+                      <li><a>Search</a></li>
+                    </ul>
+                  </div>
+                  <a class="btn btn-ghost text-4xl font-extrabold text-[#030712]">P-Ticket</a>
+                </div>
+                <div class="lg:flex lg:w-full lg:justify-between ">
+                    <div class=" hidden lg:flex">
+                        <ul class="menu menu-horizontal px-1">
+                          <li><a>Home</a></li>
+                          <li><a>About</a></li>
+                          <li><a>Destination</a></li>
+                          <li><a>Search</a></li>
+                      </div>
+                      <div class=" flex  space-x-2 border border-solid border-[#1dd10066] bg-[#1dd1001a] hover:bg-[#c0dbbc]  mr-4 px-7 rounded-lg py-4">
+                          <a class="text-[#1DD100] font-bold text-xl">Bus</a>
+                          <img src="./images/bus-icon.png" alt="">
+                      </div>
+                </div>
+            </div>
+        </div>
+        <!-- header section  -->
+        <div>
+            <div class=" bg-cover w-full grid min-h-screen" style="background-image: url(./images/banner.png); border-radius: 50px; ">
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="">
+                    <h1 class="mb-6 text-6xl font-extrabold">End-to-End Travel with <br> <span class="text-[#1DD100]">P Paribahan</span></h1>
+                    <p class="mb-8 ">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+                    <button class="btn btn-primary text-black bg-[#1DD100]">Buy Tickets</button>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </header>
+    <main class="font-raleway mt-24">
+        <section>
+            <div>
+                <h1 class="mb-12 text-4xl font-bold text-center text-black">Best offers for you</h1>
+            </div>
+            <div class="lg:flex  gap-5">
+                <div class="bg-[#FFBF0F] rounded-3xl max-h-60 flex">
+                    <div class="lg:p-12 p-6  space-y-3 font-inter text-center">
+                        <h3 class=" font-black text-3xl lg:text-4xl text-black">15% OFF</h3>
+                        <p class="lg:text-xl font-semibold ">on your next purchase</p>
+                        <p class="lg:text-lg text-base font-medium">use by January 2024</p>
+                    </div>
+                    <img  src="./images/info-devider.png" alt="">
+                    <div class="p-16 font-raleway w-auto items-center text-center space-y-3">
+                        <h3 class="text-3xl text-[#030712] font-bold">NEW15</h3>
+                        <p class="text-[#03071266] text-xl font-medium">Coupon Code</p>
+                    </div>
+                </div>
+                <div class="bg-[#F78C9C] max-h-60  rounded-3xl mt-5 lg:mt-0  flex">
+                    <div class="lg:p-12  space-y-3 font-inter text-center p-6">
+                        <h3 class=" font-black lg:text-4xl text-3xl text-black">15% OFF</h3>
+                        <p class="lg:text-xl font-semibold ">on your next purchase</p>
+                        <p class="lg:text-lg text-base font-medium">use by January 2024</p>
+                    </div>
+                    <img  src="./images/info-devider.png" alt="">
+                    <div class="p-16 font-raleway w-auto items-center text-center space-y-3">
+                        <h3 class="text-3xl text-[#030712] font-bold">Couple 20</h3>
+                        <p class="text-[#03071266] text-xl font-medium">Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="px-7 border border-solid border-[#1DD100] py-5 text-[#1DD100] text-xl font-bold  rounded-lg mt-14">
+                    See All Offers
+                </button>
+            </div>
+        </section>
+        <!-- P.H Paribahan -->
+        <section>
+            <div class="text-center mb-16 space-y-5 mt-28">
+                <h1 class=" text-4xl font-bold  text-black">P.H Paribahan</h1>
+                <p>
+                    Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing features allow for a streamlined .
+                </p>
+            </div>
+
+            <div class="">
+                <div class="bg-[#FFFFFF] flex  rounded-3xl">
+                    <div class=" w-full space-y-6">
+                        <div class="flex justify-between ">
+                            <div class="flex gap-3">
+                                 <img src="./images/bus-logo.png" alt="">
+                                 <div>
+                                     <h1 class="text-4xl font-bold text-black">P.H Paribahan</h1>
+                                     <p>Coach-009-WEB ! AC_Business</p>
+                                 </div>
+                            </div>
+                             <div class="flex items-center rounded-lg space-x-2  p-3 bg-[#1dd1001a] text-lg font-medium text-[#1DD100]">
+                                 <div><img src="./images/seat-green.png" alt=""></div>
+                                 <p><span>40</span> Seats left</p>
+                            </div>
+                         </div>
+                         <div class="bg-[#F7F8F8] space-y-8 rounded-xl p-8 ">
+                             <div class="flex justify-between">
+                                 <p class="text-lg font-semibold">Route</p>
+                                 <p class="text-lg font-semibold text-[#030712]">Dhaka - Sylhet</p>
+                             </div>
+                             <div class="flex justify-between">
+                                 <p class="text-lg font-semibold">Departure Time</p>
+                                 <p class="text-lg font-semibold text-[#030712]">9:00 PM</p>
+                             </div>
+                             <div class="flex justify-between">
+                                 <p class="p-4 bg-[#1dd1001a] rounded-lg">Boarding Point - Laxmipur</p>
+                                 <p class="p-4 bg-[#1dd1001a] rounded-lg">Dropping Point - Bogura</p>
+                                 <p class="p-4 bg-[#1dd1001a] rounded-lg">Est. Time - 11 Hour</p>
+                             </div>
+                         </div>
+                    </div>
+                    <div>
+                        <img src="./images/info-devider.png" alt="">
+                    </div>
+                    <div class="w-1/4 p-12  space-y-4">
+                        <img src="./images/fare.png"  alt="">
+                        <h4 class="text-3xl text-black font-extrabold">550 Taka</h4>
+                        <p>per seat</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- seat section -->
+        <section>
+            
+        </section>
+    </main>
+    <footer class="font-raleway ">
+
+    </footer>
+</body>
+</html>
