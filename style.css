@@ -7,3 +7,8 @@
 html{
     scroll-behavior: smooth;
 }
+
+.blur-section {
+    filter: blur(5px);
+    pointer-events: none;
+}

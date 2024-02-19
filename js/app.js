@@ -2,7 +2,7 @@ const seat = document.getElementsByClassName('btnKey')
 let seatCount = 0
 let available = 40;
 let totalPrice = 0;
-let grandTotalc = 0;
+let grandTotal = 0;
 for (let index = 0; index < seat.length; index++) {
     const btnKey = seat[index];
     // console.log(btnKey)
@@ -11,12 +11,12 @@ for (let index = 0; index < seat.length; index++) {
             alert("You can only select up to 4 seats.");
             return;
         }
-        
+        //     -----------
         if (btnKey.classList.contains('bg-[#1DD100]')) {
             return;
         }
+        btnKey.classList.remove('bg-[#F7F8F8]');
         btnKey.classList.add('bg-[#1DD100]');
-
         const totalSeat = document.getElementById('available-sit');
         available = available - 1;
         totalSeat.innerText = parseInt(available);
@@ -45,7 +45,7 @@ for (let index = 0; index < seat.length; index++) {
         
         if (seatCount === 4) {
             const couponFilter = document.getElementById('inputField');
-            couponFilter.classList.add('bg-green-200');
+            couponFilter.classList.add('bg-green-200' , );
             couponFilter.classList.remove('btn-disabled');
 
             const couponBtn = document.getElementById('btnApply');
@@ -71,15 +71,24 @@ for (let index = 0; index < seat.length; index++) {
                 codeBtn.classList.add('hidden');
             });
         }
+        const numberField = document.getElementById('number-field')
+        const nameField = document.getElementById('name-field')
+        const emailField = document.getElementById('email-field')
+        if (seatCount > 0) {
+            numberField.removeAttribute('disabled');
+            nameField.removeAttribute('disabled');
+            emailField.removeAttribute('disabled');
+        }
         
     })
 }
 
-
 const numberField = document.getElementById('number-field');
+
 numberField.addEventListener('keyup', function (e) {
     const number = e.target.value;
     const nextBtn = document.getElementById('next-btn');
+    
     if (number !== '') {
         nextBtn.removeAttribute('disabled');
     } else {
@@ -89,15 +98,28 @@ numberField.addEventListener('keyup', function (e) {
 });
 
 const nextBtn = document.getElementById('next-btn');
+
+// // ----------------
 nextBtn.addEventListener('click', function () {
+    const section = document.querySelectorAll('.section');
+    for (let index = 0; index < section.length; index++) {
+        const element = section[index];
+        element.classList.add('blur-section');
+    }
     const congratulation = document.getElementById('congratulation');
     congratulation.classList.remove('hidden');
-    // const header = document.getElementById('headerSection')
-    // header.classList.add('hidden');
-    // const main = document.getElementById('mainSection')
-    // main.classList.add('hidden');
+    
 });
+
+
+
+
 function Continue() {
+    const section = document.querySelectorAll('.section');
+    for (let index = 0; index < section.length; index++) {
+        const element = section[index];
+        element.classList.remove('blur-section');
+    }
     const numberField = document.getElementById('number-field');
     const nextBtn = document.getElementById('next-btn');
     numberField.value = '';
