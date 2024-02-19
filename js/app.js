@@ -1,4 +1,4 @@
-const seat = document.getElementsByClassName('btnKey')
+const seat = document.getElementsByClassName('btnKey');
 let seatCount = 0
 let available = 40;
 let totalPrice = 0;
@@ -28,21 +28,27 @@ for (let index = 0; index < seat.length; index++) {
 
         const seatName = btnKey.innerHTML;
         const economy = 'Economy'
-        const price = parseFloat("550")
-        const seatInfo = document.getElementById('keyPress')
-        const p1 = document.createElement('p')
-        p1.innerText = seatName
-        seatInfo.appendChild(p1)
-        const p2 = document.createElement('p')
-        p2.innerText = economy
-        seatInfo.appendChild(p2)
-        const p3 = document.createElement('p')
-        p3.innerText = price
-        seatInfo.appendChild(p3)
-        totalPrice += price
-        document.getElementById('totalAmount').innerText = totalPrice
-        document.getElementById('grandTotalPrice').innerText = totalPrice
-        
+        const price = parseFloat("550");
+        const seatInfo = document.getElementById('keyPress');
+        const newDiv = document.createElement('div');
+        newDiv.setAttribute('class', 'flex justify-between');
+        const tag1 = document.createElement('p');
+        tag1.innerText = seatName;
+        newDiv.appendChild(tag1);
+        const tag2 = document.createElement('p');
+        tag2.innerText = economy;
+        newDiv.appendChild(tag2);
+        const tag3 = document.createElement('p');
+        tag3.innerText = price;
+        newDiv.appendChild(tag3);
+        seatInfo.appendChild(newDiv);
+        const totalAmount = document.getElementById('totalAmount');
+        totalPrice = totalPrice + price;
+        totalAmount.innerText = totalPrice;
+        grandTotal = grandTotal + price;
+        const grandTotalPrice = document.getElementById('grandTotalPrice');
+        grandTotalPrice.innerText = grandTotal;
+          
         if (seatCount === 4) {
             const couponFilter = document.getElementById('inputField');
             couponFilter.classList.add('bg-green-200' , );
@@ -71,9 +77,9 @@ for (let index = 0; index < seat.length; index++) {
                 codeBtn.classList.add('hidden');
             });
         }
-        const numberField = document.getElementById('number-field')
-        const nameField = document.getElementById('name-field')
-        const emailField = document.getElementById('email-field')
+        const numberField = document.getElementById('number-field');
+        const nameField = document.getElementById('name-field');
+        const emailField = document.getElementById('email-field');
         if (seatCount > 0) {
             numberField.removeAttribute('disabled');
             nameField.removeAttribute('disabled');
@@ -128,6 +134,6 @@ function Continue() {
     const emailField = document.getElementById('email-field');
     emailField.value = '';
     nextBtn.setAttribute('disabled', true);
-    const congratulation = document.getElementById('congratulation')
+    const congratulation = document.getElementById('congratulation');
     congratulation.classList.add('hidden');
 }
